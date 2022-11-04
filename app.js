@@ -15,6 +15,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const project = require("./routes/projectRoute");
 
 app.use("/api/v1", project);
+app.use("/", (req, res) => {
+	res.json({ message: "Hello guys" });
+});
 
 // app.use(express.static(path.join(__dirname, "../frontend/build")));
 
