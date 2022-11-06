@@ -4,6 +4,9 @@ const errorMiddleware = require("./middleware/error");
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
 const path = require("path");
+const cors = require("cors");
+
+app.use(cors());
 
 if (process.env.NODE_ENV !== "PRODUCTION") {
 	dotenv.config();
